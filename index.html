@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!-- Compiled and minified CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- font awesome -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/277d889efd.js"></script>
+    <title>ToDo List</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">My TODO List</span>
+                    <form id="task-form">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="task">New task</label>
+                                <input id="task" type="text">
+                            </div>
+                        </div>
+                        <input class="btn" type="submit" value="Add task">
+                    </form>
+                </div>
+                <div class="card-action">
+                    <h5>Task list</h5>
+                    <div class="input-field col s12">
+                        <label for="filter">Find a task</label>
+                        <input id="filter" type="text">
+                    </div>
+                    <ul class="collection">
+                        <!--                        <li class="collection-item">Study Emmet
+                                                    <a class="secondary-content" href="#"><i class="fas fa-backspace"></i></a>
+                                                </li>
+                                                <li class="collection-item">Study JS
+                                                    <a class="secondary-content" href="#"><i class="fas fa-backspace"></i></a>
+                                                </li>
+                                                <li class="collection-item">Study OOP
+                                                    <a class="secondary-content" href="#"><i class="fas fa-backspace"></i></a>
+                                                </li>-->
+                    </ul>
+                    <a class="btn" href="#" id="clear-tasks">Clear tasks</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Compiled and minified JavaScript - materialize -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- local js -->
+<script src="app.js"></script>
+</body>
+</html>
