@@ -1,20 +1,4 @@
 class UI {
-    addPersonToTable(person) {
-        // create tr
-        const tr = document.createElement('tr');
-        // create all td with person data
-        tr.innerHTML = `<td>${person.firstName}</td>
-                        <td>${person.lastName}</td>
-                        <td>${person.city}</td>
-                        <td>${person.street}</td>
-                        <td>${person.postcode}</td>
-                        <td>${person.phone}</td>
-                        <td><a href="#"><i class="fas fa-backspace"></i></a></td>
-        `;
-        // append tr to table
-        contacts.appendChild(tr);
-    }
-
     alertMessage(message, style) {
         // create div for alert message
         const div = document.createElement('div');
@@ -26,7 +10,7 @@ class UI {
         div.appendChild(text);
         // find components - before and after alert div element
         const card = document.querySelector('.card-content');
-        const form = document.querySelector('#contact-form');
+        const form = document.querySelector('#task-form');
         // add alert info html
         card.insertBefore(div, form);
         // set alert messega up to 5 sec
@@ -35,9 +19,22 @@ class UI {
         }, 5000);
     }
 
-    deletePersonFromTable(eventElement) {
-        const personContact = eventElement.parentElement.parentElement.parentElement;
-        personContact.remove();
+    addTaskToTable(task) {
+        // create li
+        const li = document.createElement('li');
+        // add class
+        li.className = 'collection-item';
+        // add input value
+        li.appendChild(document.createTextNode(task.task));
+        // link for element removing
+        const link = document.createElement('a');
+        // add css to link
+        link.className = 'secondary-content';
+        // add fas icon
+        link.innerHTML = '<i class="fas fa-backspace"></i>';
+        // add link into li
+        li.appendChild(link);
+        // add li into ul
+        taskList.appendChild(li);
     }
-
 }
